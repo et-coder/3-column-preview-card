@@ -12,7 +12,7 @@
     --transparent: hsla(0, 0%, 100%, 0.75);
 }
 
-body {
+main {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -55,6 +55,7 @@ body {
     flex: 1;
 }
 
+h1,
 h2 {
     font-size: 1.5rem;
     margin: 1em 0 0.75em;
