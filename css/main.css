@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gray: hsl(0, 0%, 95%);
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark-cyan: hsl(179, 100%, 13%);
+    --transparent: hsla(0, 0%, 100%, 0.75);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: var(--gray);
+}
+
+.container {
+    width: 300px;
+    margin: 5em auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    padding: 2em;
+}
+
+.content img {
+    width: 50px;
+}
+
+.sedan {
+    background-color: var(--orange);
+    border-radius: 10px 10px 0 0;
+    flex: 1;
+}
+
+.suv {
+    background-color: var(--cyan);
+    width: 100%;
+    flex: 1;
+}
+
+.luxury {
+    background-color: var(--dark-cyan);
+    border-radius: 0 0 10px 10px;
+    flex: 1;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 1em 0 0.75em;
+    color: var(--gray);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 1.3em;
+    color: var(--transparent);
+}
+
+button {
+    border: 1px solid transparent;
+    background-color: var(--gray);
+    border-radius: 30px;
+    padding: 0.75em 1.5em;
+}
+
+.sedan button {
+    color: var(--orange);
+}
+
+.suv button {
+    color: var(--cyan);
+}
+
+.luxury button {
+    color: var(--dark-cyan);
+}
+
+button:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 780px) {
+    .container {
+        position: absolute;
+        width: 750px;
+        flex-direction: row;
+        margin: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    p {
+        margin: 0 0 4em;
+    }
+
+    .sedan {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .luxury {
+        border-radius: 0 10px 10px 0;
+    }
+}
